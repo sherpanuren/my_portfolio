@@ -1,6 +1,6 @@
 # 👋 Nuren Sherpa – Personal Portfolio Website
 
-Welcome to **Nuren Sherpa**, my personal portfolio website built to showcase my journey as an aspiring **ICT Project Manager** with a background in Computer Engineering.
+Welcome to my personal portfolio website built to showcase my journey as an aspiring **ICT Project Manager** with a background in Computer Engineering.
 
 This site reflects my transition from hands-on technical work to managing impactful digital projects, especially in the Nepali tech ecosystem.
 
