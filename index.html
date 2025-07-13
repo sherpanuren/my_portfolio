@@ -508,6 +508,18 @@
                 transform: translateY(-10px);
             }
         }
+        .logo-img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+          transform: scale(1.1);
+        }
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -637,11 +649,11 @@
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
     <nav id="navbar">
-       <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
-            <div class="logo">
-                  <img src="avatar.jpg" alt="Nuren Sherpa" class="logo-img" />
-            </div>
-            <ul style="display:flex; gap:2rem; list-style:none; margin:0; padding:0;">
+       <div class="container">
+            <a href="#home" class="logo">
+              <img src="avatar.jpg" alt="Nuren Sherpa" class="logo-img">
+           </a>
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
