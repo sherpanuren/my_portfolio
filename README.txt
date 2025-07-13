@@ -1,6 +1,6 @@
 🌐 Nuren Sherpa — Personal Portfolio Website
 
-This is my personal website showcasing my profile, skills, and projects as an aspiring Data Analyst and Data Science enthusiast. The site is built using a free Bootstrap template from DevCrud and customized to align with my goals in the field of data and analytics.
+This is my personal website showcasing my profile, skills, and projects as an aspiring ICT Project  manager. The site is built using a free Bootstrap template from DevCrud and customized to align with my goals in the field of data and analytics.
 
 🔗 Live Website
 
@@ -10,7 +10,7 @@ Visit: [nurensherpa.com.np](https://www.nurensherpa.com.np)
 
 💼 About Me
 
-I'm a Computer Engineering graduate with a passion for data. I use tools like Python, Pandas, Matplotlib, and SQL to explore datasets, solve real-world problems, and build data-driven projects. My goal is to start my career as a Data Analyst and grow into a Data Scientist in the future.
+I’m a Computer Engineering graduate with a strong interest in project planning, digital tools, and ICT coordination. My goal is to become an effective ICT Project Manager — skilled in organizing cross-functional teams, managing timelines, and bridging the gap between technical and business requirements.
 
 ---
 
@@ -26,12 +26,12 @@ I'm a Computer Engineering graduate with a passion for data. I use tools like Py
 
 🛠 Tech Stack
 
-- HTML5 / CSS3 / JavaScript
-- Bootstrap 4
-- jQuery
-- GitHub Pages / Hosting
-
----
+Trello / Jira
+Notion
+Microsoft Excel / Word / PowerPoint
+Google Docs / Sheets
+Agile / Scrum basics
+Python basics
 
 Template Credits
 
@@ -45,5 +45,5 @@ Template Credits
 
 📬 Contact
 
-If you're interested in hiring a passionate and entry-level Data Analyst — feel free to reach out via [https://www.linkedin.com/in/nurensherpa/] or (mailto:sherpanuren1@gmail.com)
+If you're interested in hiring a passionate and entry-level ICT Project Co-ordinator — feel free to reach out via [https://www.linkedin.com/in/nurensherpa/] or (mailto:sherpanuren1@gmail.com)
 
