@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuren Sherpa - ICT Project Manager</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Hotel Tashidelek - Authentic Nepali Cuisine | Charikot, Dolakha</title>
     <style>
         * {
             margin: 0;
@@ -12,631 +11,431 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #6366f1;
-            --secondary-color: #4f46e5;
-            --accent-color: #f59e0b;
-            --success-color: #10b981;
-            --purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            --shadow-colored: 0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--bg-white);
+            color: #333;
             overflow-x: hidden;
         }
 
-        /* Navigation */
-        nav {
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 0;
             position: fixed;
-            top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
+            top: 0;
             z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(30px);
-        }
-
-        nav .container {
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 75px;
+            padding: 0 2rem;
         }
 
         .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        .nav-menu {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        .logo:hover .logo-img {
-            transform: rotate(360deg);
-            border-color: var(--accent-color);
-        }
-
-        nav ul {
             list-style: none;
-            display: flex;
-            gap: 35px;
+            gap: 2rem;
         }
 
-        nav a {
+        .nav-menu a {
+            color: white;
             text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 8px 0;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 3px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            transition: width 0.3s ease;
-            border-radius: 2px;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Mobile menu */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            cursor: pointer;
+        .nav-menu a:hover {
+            color: #f39c12;
         }
 
         /* Hero Section */
         .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('restaurant.jpg');
+            background-size: cover;
+            background-position: center;
             height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             position: relative;
-            overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,0 1000,300 1000,1000 0,700"/><polygon fill="%23ffffff05" points="0,200 1000,500 1000,800 0,500"/></svg>');
-            background-size: cover;
-            animation: float 20s ease-in-out infinite;
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-        }
-
-        .hero-content {
-            max-width: 900px;
-            padding: 0 20px;
-            z-index: 1;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 25px;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-            background: linear-gradient(45deg, #ffffff, #f0f9ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 600;
-        }
-
-        .hero p {
+        .hero-content p {
             font-size: 1.3rem;
-            margin-bottom: 50px;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.6s forwards;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(45deg, var(--accent-color), #fbbf24);
+            background: #f39c12;
             color: white;
-            padding: 18px 35px;
-            text-decoration: none;
+            padding: 1rem 2rem;
+            border: none;
             border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button.secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .cta-button.secondary:hover {
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
-        }
-
-        /* Scroll indicator */
-        .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.5rem;
-            animation: bounce 2s infinite;
-            cursor: pointer;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 120px 0;
-            position: relative;
-        }
-
-        .section:nth-child(even) {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: #f8f9fa;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
         }
 
-        .section h2 {
+        .section-title {
             text-align: center;
-            font-size: 3.5rem;
-            margin-bottom: 100px;
-            color: var(--text-dark);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
             position: relative;
-            font-weight: 800;
-            letter-spacing: -0.02em;
         }
 
-        .section h2::after {
+        .section-title::after {
             content: '';
             position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 3px;
-        }
-
-        .section h2::before {
-            content: '';
-            position: absolute;
-            bottom: -35px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
             width: 80px;
-            height: 5px;
-            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
-            border-radius: 3px;
+            height: 3px;
+            background: #f39c12;
         }
 
-        /* About Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 100px;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
             align-items: center;
         }
 
-        .profile-image {
-            position: relative;
-            text-align: center;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -25px;
-            left: -25px;
-            right: -25px;
-            bottom: -25px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            z-index: -1;
-            animation: pulse 3s infinite;
-        }
-
-        .avatar-img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 10px solid white;
-            box-shadow: var(--shadow-lg);
-            transition: transform 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .avatar-img:hover {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        .about-text p {
-            margin-bottom: 25px;
-            color: var(--text-light);
-            font-size: 1.15rem;
+        .about-text {
+            font-size: 1.1rem;
             line-height: 1.8;
         }
 
-        .about-stats {
+        .about-image {
+            background: #ddd;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            color: white;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(99, 102, 241, 0.05);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
+        .menu-category {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
 
-        .stat-item:hover {
+        .menu-category:hover {
             transform: translateY(-5px);
         }
 
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-top: 5px;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-
-        .skill-card {
-            background: var(--bg-white);
-            padding: 50px 40px;
-            border-radius: 25px;
+        .menu-category h3 {
+            color: #e74c3c;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             text-align: center;
-            box-shadow: var(--shadow);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid #e5e7eb;
+        }
+
+        .menu-items {
+            list-style: none;
+        }
+
+        .menu-items li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-items li:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .item-price {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            color: #f39c12;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .destination-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px);
+            background: rgba(243,156,18,0.2);
+        }
+
+        .destination-card h4 {
+            color: #f39c12;
+            margin-bottom: 0.5rem;
+        }
+
+        .destination-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .service-image {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-        }
-
-        .skill-card::after {
+        .service-image::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(245, 158, 11, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            background: url('/bolero.jpg');
+            background-size: 200px 200px;
         }
 
-        .skill-card:hover::after {
-            opacity: 1;
+        .contact-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
         }
 
-        .skill-card:hover {
-            transform: translateY(-20px) scale(1.02);
-            box-shadow: var(--shadow-colored);
+        .contact-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 0;
+            background: #f8f9fa;
         }
 
-        .skill-icon {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            background: #ddd;
+            height: 200px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 25px;
+            font-size: 1rem;
+            color: #666;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
             color: white;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-            transition: all 0.3s ease;
+            transition: transform 0.3s;
         }
 
-        .skill-card:hover .skill-icon {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
-        }
-
-        .skill-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 25px;
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-
-        .skill-list {
-            list-style: none;
-            text-align: left;
-            margin: 0;
-            padding: 0;
-        }
-
-        .skill-list li {
-            position: relative;
-            padding: 15px 0 15px 40px;
-            color: var(--text-light);
-            line-height: 1.6;
-            transition: all 0.3s ease;
-            border-radius: 10px;
-            margin-bottom: 8px;
-            font-size: 1.05rem;
-        }
-
-        .skill-list li::before {
-            content: '✨';
-            position: absolute;
-            left: 8px;
-            top: 15px;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-list li:hover {
-            color: var(--text-dark);
-            background: rgba(99, 102, 241, 0.08);
-            transform: translateX(8px);
-        }
-
-        .skill-list li:hover::before {
-            transform: scale(1.3);
-        }
-
-        /* Education Section */
-        .education-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .education-card {
-            background: var(--bg-white);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border-left: 6px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .education-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            transform: translate(50%, -50%);
-            opacity: 0.1;
-        }
-
-        .education-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        .education-card .university {
-            font-size: 1.3rem;
-            color: var(--text-dark);
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        .education-card p {
-            color: var(--text-light);
-            line-height: 1.8;
-            font-size: 1.1rem;
+        .gallery-item:hover {
+            transform: scale(1.05);
         }
 
         /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #2c3e50;
+            color: white;
+        }
+
         .contact-content {
-            max-width: 700px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #f39c12;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #f39c12;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #e67e22;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
             text-align: center;
-        }
-
-        .contact-content p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 50px;
-            line-height: 1.7;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 50px;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            padding: 25px;
-            border-radius: 15px;
-            background: rgba(99, 102, 241, 0.05);
-            min-width: 120px;
-        }
-
-        .contact-item:hover {
-            color: var(--primary-color);
-            transform: translateY(-5px);
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        .contact-item i {
-            font-size: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover i {
-            transform: scale(1.2);
-        }
-
-        .contact-item span {
-            font-weight: 600;
+            padding: 2rem 0;
         }
 
         /* Animations */
@@ -651,368 +450,303 @@
             }
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.3;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.1;
-            }
-        }
-
-        /* Floating shapes */
-        .floating-shapes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .shape:nth-child(1) {
-            width: 150px;
-            height: 150px;
-            top: 20%;
-            left: 10%;
-            animation-delay: -2s;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
-        }
-
-        .shape:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            top: 60%;
-            right: 10%;
-            animation-delay: -4s;
-            background: linear-gradient(45deg, rgba(245, 158, 11, 0.1), rgba(99, 102, 241, 0.1));
-        }
-
-        .shape:nth-child(3) {
-            width: 120px;
-            height: 120px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: -1s;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
-        }
-
-        .shape:nth-child(4) {
-            width: 80px;
-            height: 80px;
-            top: 10%;
-            right: 30%;
-            animation-delay: -3s;
-            background: linear-gradient(45deg, rgba(245, 158, 11, 0.1), rgba(99, 102, 241, 0.1));
-        }
-
-        .shape:nth-child(5) {
-            width: 160px;
-            height: 160px;
-            bottom: 10%;
-            right: 20%;
-            animation-delay: -5s;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            top: 75px;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            z-index: 1000;
-            transition: width 0.1s ease;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            nav ul {
+            .nav-menu {
                 display: none;
             }
 
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
-                text-align: center;
-                gap: 60px;
             }
 
-            .avatar-img {
-                width: 250px;
-                height: 250px;
-            }
-
-            .skills-grid {
+            .contact-content {
                 grid-template-columns: 1fr;
             }
 
-            .contact-info {
-                flex-direction: column;
-                gap: 25px;
+            .menu-grid {
+                grid-template-columns: 1fr;
             }
 
-            .section {
-                padding: 80px 0;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
-            .section h2 {
-                font-size: 2.5rem;
-                margin-bottom: 60px;
-            }
-
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .skill-card {
-                padding: 30px 25px;
-            }
-            
-            .avatar-img {
-                width: 200px;
-                height: 200px;
+            .destinations {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="scroll-indicator" id="scrollIndicator"></div>
-
-    <nav id="navbar">
-        <div class="container">
-            <a href="#home" class="logo">
-                <img src="avatar.jpg" alt="Nuren Sherpa" class="logo-img">
-                <span>Nuren</span>
-            </a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Hotel Tashidelek</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
         <div class="hero-content">
-            <h1 id="heroTitle">Nuren Sherpa</h1>
-            <div class="hero-subtitle">ICT Project Management Enthusiast</div>
-            <p>Bridging technology and business through innovative project management solutions</p>
-            <div class="cta-buttons">
-                <a href="#about" class="cta-button">
-                    <i class="fas fa-user"></i>
-                    Discover My Journey
-                </a>
-                <a href="#contact" class="cta-button secondary">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
-                </a>
-            </div>
-        </div>
-        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-            <i class="fas fa-chevron-down"></i>
+            <h1>Hotel Tashidelek</h1>
+            <p>Authentic Nepali Cuisine & Transportation Services in Charikot, Dolakha</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
         </div>
     </section>
 
-    <section id="about" class="section">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Us</h2>
             <div class="about-content">
-                <div class="profile-image">
-                    <img src="avatar.jpg" alt="Nuren Sherpa" class="avatar-img">
-                </div>
                 <div class="about-text">
-                    <h3>ICT Project Management Enthusiast</h3>
-                    <p>As a recent Computer Engineering graduate from the Institute of Engineering (IOE), Tribhuvan University, I am passionate about bridging the gap between technology and business through effective project management.</p>
-                    <p>My academic foundation in computer engineering, combined with my keen interest in ICT project management, positions me uniquely to lead technology initiatives that drive digital transformation and innovation.</p>
-                    <p>I believe in the power of technology to solve real-world problems and am committed to managing projects that create meaningful impact for organizations and communities.</p>
+                    <p>Welcome to Hotel Tashidelek, your authentic Nepali dining destination in Charikot, Dolakha. We take pride in serving traditional Nepali cuisine that captures the true essence of our rich culinary heritage.</p>
                     
-<!--                     <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Years Study</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Tech Skills</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                    </div> -->
+                    <p>Our restaurant specializes in authentic dhindo, delicious khana sets, handmade momos, flavorful chowmein, aromatic sukuti, and crispy potato fries. Every dish is prepared with fresh, local ingredients and traditional cooking methods passed down through generations.</p>
+                    
+                    <p>Experience the warmth of Nepali hospitality in our cozy atmosphere, where every meal is a celebration of flavor and tradition. Join us for an unforgettable culinary journey through the tastes of Nepal.</p>
+                </div>
+                <div class="about-image">
+                    [Your Restaurant Image Here]
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="skills" class="section">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-content">
+                    <h3>🚗 Bolero Transportation Service</h3>
+                    <p>Explore the beautiful Dolakha region with our reliable Bolero vehicle service! Perfect for tourists and visitors who want to discover the stunning landscapes and cultural heritage of the area.</p>
+                    
+                    <p>Our experienced drivers know the local routes and can safely take you to all the major destinations in and around Dolakha. Enjoy comfortable rides with spectacular mountain views!</p>
+                    
+                    <div class="destinations">
+                        <div class="destination-card">
+                            <h4>Jiri</h4>
+                            <p>Gateway to Everest region</p>
+                        </div>
+                        <div class="destination-card">
+                            <h4>Kalinchowk</h4>
+                            <p>Sacred temple & viewpoint</p>
+                        </div>
+                        <div class="destination-card">
+                            <h4>Sailung</h4>
+                            <p>Himalayan sunrise views</p>
+                        </div>
+                        <div class="destination-card">
+                            <h4>Dolakha City</h4>
+                            <p>Historical & cultural sites</p>
+                        </div>
                     </div>
-                    <h3>Project Management</h3>
-                    <ul class="skill-list">
-                        <li>Agile & Scrum Methodologies</li>
-                        <li>Work Breakdown Structure (WBS)</li>
-                        <li>Risk Management & Mitigation</li>
-                        <li>Project Planning & Scheduling</li>
-                        <li>Stakeholder Communication</li>
-                        <li>Budgeting & Resource Allocation</li>
+                    
+                    <a href="#contact" class="contact-btn">Book Your Trip</a>
+                </div>
+                <div class="service-image">
+                    [Bolero Vehicle / Mountain View Image]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-category">
+                    <h3>Main Dishes</h3>
+                    <ul class="menu-items">
+                        <li>
+                            <span class="item-name">Authentic Dhindo</span>
+                            <span class="item-price">Rs. 150</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Dal Bhat Set</span>
+                            <span class="item-price">Rs. 250</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Chicken Khana Set</span>
+                            <span class="item-price">Rs. 350</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Mutton Khana Set</span>
+                            <span class="item-price">Rs. 450</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Vegetarian Thali</span>
+                            <span class="item-price">Rs. 200</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Tools & Platforms</h3>
-                    <ul class="skill-list">
-                        <li>Trello / Jira </li>
-                        <li>Notion for documentation</li>
-                        <li>Microsoft Project or Gantt charts</li>
-                        <li>Slack, MS Teams, Google Workspace</li>
-                        <li>GitHub (basic project tracking, versioning)</li>
-                         <li>UI/UX</li>
+
+                <div class="menu-category">
+                    <h3>Momos & Snacks</h3>
+                    <ul class="menu-items">
+                        <li>
+                            <span class="item-name">Chicken Momo (10 pcs)</span>
+                            <span class="item-price">Rs. 120</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Buff Momo (10 pcs)</span>
+                            <span class="item-price">Rs. 100</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Vegetable Momo (10 pcs)</span>
+                            <span class="item-price">Rs. 80</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Fried Momo (10 pcs)</span>
+                            <span class="item-price">Rs. 150</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Sukuti</span>
+                            <span class="item-price">Rs. 180</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>ICT & Technical Understanding</h3>
-                    <ul class="skill-list">
-                        <li>Software Development Lifecycle (SDLC)</li>
-                        <li>Cloud Platforms (basic AWS/Supabase knowledge)</li>
-                        <li>Databases (SQL – basic familiarity)</li>
-                        <li>APIs and Integration Concepts</li>
-                        <li>Understanding of Frontend/Backend workflows</li>
+
+                <div class="menu-category">
+                    <h3>Noodles & Fried Items</h3>
+                    <ul class="menu-items">
+                        <li>
+                            <span class="item-name">Chicken Chowmein</span>
+                            <span class="item-price">Rs. 160</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Vegetable Chowmein</span>
+                            <span class="item-price">Rs. 120</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Potato Fries</span>
+                            <span class="item-price">Rs. 80</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Thukpa</span>
+                            <span class="item-price">Rs. 140</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Fried Rice</span>
+                            <span class="item-price">Rs. 150</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Soft Skills</h3>
-                    <ul class="skill-list">
-                        <li>Leadership & Team Coordination</li>
-                        <li>Critical Thinking</li>
-                        <li>Problem Solving</li>
-                        <li>Client Communication</li>
-                        <li>Presentation & Reporting</li>
+
+                <div class="menu-category">
+                    <h3>Beverages</h3>
+                    <ul class="menu-items">
+                        <li>
+                            <span class="item-name">Nepali Tea</span>
+                            <span class="item-price">Rs. 30</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Milk Tea</span>
+                            <span class="item-price">Rs. 40</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Black Tea</span>
+                            <span class="item-price">Rs. 25</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Lassi</span>
+                            <span class="item-price">Rs. 60</span>
+                        </li>
+                        <li>
+                            <span class="item-name">Fresh Juice</span>
+                            <span class="item-price">Rs. 80</span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section">
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
         <div class="container">
-            <h2>Education</h2>
-            <div class="education-content">
-                <div class="education-card">
-                    <h3>Bachelor of Computer Engineering</h3>
-                    <div class="university">Kathford International College of Engineering and Management, Institute of Engineering(IOE), Tribhuvan University</div>
-                    <p>Comprehensive study in computer engineering fundamentals, software development, system design, and project management. Focused on bridging technical expertise with business acumen to drive innovative solutions in the ICT sector.</p>
-                </div>
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">[Menu Image 1]</div>
+                <div class="gallery-item">[Restaurant Interior]</div>
+                <div class="gallery-item">[Dhindo Dish]</div>
+                <div class="gallery-item">[Momo Platter]</div>
+                <div class="gallery-item">[Khana Set]</div>
+                <div class="gallery-item">[Restaurant Exterior]</div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
-                <p>Ready to collaborate on your next ICT project? Let's discuss how my technical expertise and project management skills can drive your digital transformation initiatives.</p>
                 <div class="contact-info">
-                    <a href="mailto:sherpanuren1@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://linkedin.com/in/nurensherpa" class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/sherpanuren" class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
+                    <h3>Visit Us</h3>
+                    <p><strong>Address:</strong> Charikot, Dolakha, Nepal</p>
+                    <p><strong>Phone:</strong> +977-XX-XXXXXX</p>
+                    <p><strong>Email:</strong> info@hoteltashidelek.com</p>
+                    <p><strong>Hours:</strong> 7:00 AM - 9:00 PM</p>
+                    
+                    <h3>Our Services</h3>
+                    <p>🍽️ Authentic Nepali Restaurant</p>
+                    <p>🚗 Bolero Transportation Service</p>
+                    <p>🏔️ Tourist Guide Services</p>
+                    <p>📱 Easy Booking & Reservations</p>
+                    
+                    <h3>Why Choose Us?</h3>
+                    <p>• Fresh, locally sourced ingredients</p>
+                    <p>• Traditional Nepali cooking methods</p>
+                    <p>• Experienced local drivers</p>
+                    <p>• Warm hospitality and cozy atmosphere</p>
+                    <p>• Affordable prices for food & transport</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Hotel Tashidelek. All rights reserved. Serving authentic Nepali cuisine & transportation services in Charikot, Dolakha.</p>
+        </div>
+    </footer>
 
     <script>
         // Smooth scrolling for navigation links
@@ -1029,73 +763,34 @@
             });
         });
 
-        // Scroll indicator
+        // Header scroll effect
         window.addEventListener('scroll', function() {
-            const scrollIndicator = document.getElementById('scrollIndicator');
-            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            scrollIndicator.style.width = scrollPercent + '%';
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 62, 80, 0.95)';
             } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.background = 'linear-gradient(135deg, #2c3e50, #3498db)';
             }
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        // Contact form submission
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        // Menu category hover effects
+        document.querySelectorAll('.menu-category').forEach(category => {
+            category.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
             });
-        }, observerOptions);
-
-        // Observe skill cards and other elements
-        document.querySelectorAll('.skill-card, .education-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        });
-
-        // Add typing effect to hero text
-        function typeWriter(element, text, speed = 50) {
-            let i = 0;
-            element.innerHTML = '';
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page load
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                const heroTitle = document.querySelector('.hero h1');
-                typeWriter(heroTitle, 'Nuren Sherpa');
-            }, 1000);
+            
+            category.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
         });
     </script>
 </body>
