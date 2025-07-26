@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuren Sherpa - Cloud & AWS Enthusiast</title>
-    <link href="avatar.jpg" rel="stylesheet">
+    <title>Nuren Sherpa - AWS Cloud Architect & Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,29 +14,29 @@
         }
 
         :root {
-            --primary-color: #6366f1;
-            --secondary-color: #4f46e5;
-            --accent-color: #f59e0b;
-            --success-color: #10b981;
-            --purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --text-dark: #1f2937;
+            --aws-orange: #FF9900;
+            --aws-dark: #232F3E;
+            --aws-blue: #1976d2;
+            --primary-gradient: linear-gradient(135deg, #FF9900 0%, #FF6B35 100%);
+            --dark-gradient: linear-gradient(135deg, #232F3E 0%, #1A252F 100%);
+            --text-dark: #1a1a1a;
             --text-light: #6b7280;
             --bg-light: #f8fafc;
             --bg-white: #ffffff;
-            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            --shadow-colored: 0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-colored: 0 25px 50px -12px rgba(255, 153, 0, 0.3);
+            --border-radius: 20px;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             background: var(--bg-white);
             overflow-x: hidden;
         }
 
-        /* Navigation */
+        /* Enhanced Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -45,31 +46,27 @@
             z-index: 1000;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: var(--shadow);
-        }
-
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(255, 153, 0, 0.1);
         }
 
         nav .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 75px;
+            height: 80px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--aws-orange);
             transition: transform 0.3s ease;
         }
 
@@ -78,23 +75,29 @@
         }
 
         .logo-img {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--primary-color);
+            border: 3px solid var(--aws-orange);
             transition: all 0.3s ease;
         }
 
-        .logo:hover .logo-img {
-            transform: rotate(360deg);
-            border-color: var(--accent-color);
+        .aws-certified-badge {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 35px;
+            gap: 40px;
         }
 
         nav a {
@@ -103,7 +106,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             position: relative;
-            padding: 8px 0;
+            padding: 10px 0;
         }
 
         nav a::after {
@@ -114,7 +117,7 @@
             transform: translateX(-50%);
             width: 0;
             height: 3px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            background: var(--primary-gradient);
             transition: width 0.3s ease;
             border-radius: 2px;
         }
@@ -123,24 +126,10 @@
             width: 100%;
         }
 
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Mobile menu */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            cursor: pointer;
-        }
-
-        /* Hero Section */
+        /* Hero Section with AWS Theme */
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--dark-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -157,82 +146,99 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,0 1000,300 1000,1000 0,700"/><polygon fill="%23ffffff05" points="0,200 1000,500 1000,800 0,500"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23FF990020" points="0,0 1000,300 1000,1000 0,700"/><polygon fill="%23FF990010" points="0,200 1000,500 1000,800 0,500"/></svg>');
             background-size: cover;
             animation: float 20s ease-in-out infinite;
         }
 
-        .hero::after {
-            content: '';
+        .aws-logo-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25rem;
+            color: rgba(255, 153, 0, 0.03);
+            z-index: 0;
+            font-weight: 900;
         }
 
         .hero-content {
-            max-width: 900px;
-            padding: 0 20px;
-            z-index: 1;
+            max-width: 1000px;
+            padding: 0 30px;
+            z-index: 2;
             position: relative;
         }
 
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+            box-shadow: 0 10px 30px rgba(255, 153, 0, 0.3);
+        }
+
         .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 25px;
+            font-size: 5rem;
+            margin-bottom: 20px;
             opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-            background: linear-gradient(45deg, #ffffff, #f0f9ff);
+            animation: fadeInUp 1s ease 0.2s forwards;
+            background: linear-gradient(45deg, #ffffff, #FF9900);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-            font-weight: 800;
+            font-weight: 900;
             letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 600;
+            animation: fadeInUp 1s ease 0.4s forwards;
+            color: var(--aws-orange);
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 50px;
             opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
-            color: rgba(255, 255, 255, 0.8);
+            animation: fadeInUp 1s ease 0.6s forwards;
+            color: rgba(255, 255, 255, 0.9);
             line-height: 1.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
             opacity: 0;
-            animation: fadeInUp 1s ease 0.6s forwards;
+            animation: fadeInUp 1s ease 0.8s forwards;
         }
 
         .cta-button {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: linear-gradient(45deg, var(--accent-color), #fbbf24);
+            gap: 12px;
+            background: var(--primary-gradient);
             color: white;
-            padding: 18px 35px;
+            padding: 20px 40px;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+            box-shadow: var(--shadow-colored);
             position: relative;
             overflow: hidden;
         }
@@ -243,192 +249,116 @@
             backdrop-filter: blur(10px);
         }
 
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 35px 60px rgba(255, 153, 0, 0.4);
         }
 
-        .cta-button.secondary:hover {
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
-        }
-
-        /* Scroll indicator */
-        .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.5rem;
-            animation: bounce 2s infinite;
-            cursor: pointer;
-        }
-
-        /* Section Styles */
+        /* Skills Section with AWS Focus */
         .section {
             padding: 120px 0;
             position: relative;
         }
 
-        .section:nth-child(even) {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
         }
 
         .section h2 {
             text-align: center;
-            font-size: 3.5rem;
-            margin-bottom: 100px;
+            font-size: 4rem;
+            margin-bottom: 20px;
             color: var(--text-dark);
-            position: relative;
-            font-weight: 800;
+            font-weight: 900;
             letter-spacing: -0.02em;
         }
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 5px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 3px;
-        }
-
-        .section h2::before {
-            content: '';
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 5px;
-            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
-            border-radius: 3px;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 100px;
-            align-items: center;
-        }
-
-        .profile-image {
-            position: relative;
+        .section-subtitle {
             text-align: center;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -25px;
-            left: -25px;
-            right: -25px;
-            bottom: -25px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            z-index: -1;
-            animation: pulse 3s infinite;
-        }
-
-        .avatar-img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 10px solid white;
-            box-shadow: var(--shadow-lg);
-            transition: transform 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .avatar-img:hover {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        .about-text p {
-            margin-bottom: 25px;
+            font-size: 1.3rem;
             color: var(--text-light);
-            font-size: 1.15rem;
-            line-height: 1.8;
+            margin-bottom: 80px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .about-stats {
+        /* AWS Certification Showcase */
+        .certifications-showcase {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
-        .stat-item {
+        .cert-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
             text-align: center;
-            padding: 20px;
-            background: rgba(99, 102, 241, 0.05);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stat-item:hover {
-            transform: translateY(-5px);
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
         }
 
-        .stat-number {
-            font-size: 2rem;
+        .cert-card:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 153, 0, 0.1);
+            border-color: var(--aws-orange);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            color: var(--aws-orange);
+            margin-bottom: 20px;
+        }
+
+        .cert-title {
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--primary-color);
-            display: block;
+            margin-bottom: 15px;
+            color: white;
         }
 
-        .stat-label {
+        .cert-status {
+            color: var(--aws-orange);
+            font-weight: 600;
             font-size: 0.9rem;
-            color: var(--text-light);
-            margin-top: 5px;
         }
 
-        /* Skills Section */
+        /* Enhanced Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 40px;
         }
 
         .skill-card {
             background: var(--bg-white);
             padding: 50px 40px;
-            border-radius: 25px;
-            text-align: center;
+            border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid #e5e7eb;
@@ -443,23 +373,7 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-        }
-
-        .skill-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(245, 158, 11, 0.05));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .skill-card:hover::after {
-            opacity: 1;
+            background: var(--primary-gradient);
         }
 
         .skill-card:hover {
@@ -467,40 +381,36 @@
             box-shadow: var(--shadow-colored);
         }
 
-        .skill-icon {
-            font-size: 2.8rem;
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
             margin-bottom: 30px;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            padding: 25px;
+            background: var(--primary-gradient);
+            border-radius: 20px;
+            color: white;
+            width: 80px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 25px;
-            color: white;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 30px;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover .skill-icon {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 30px rgba(255, 153, 0, 0.3);
         }
 
         .skill-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 25px;
+            font-size: 1.8rem;
             color: var(--text-dark);
             font-weight: 700;
+            flex: 1;
         }
 
         .skill-list {
             list-style: none;
-            text-align: left;
-            margin: 0;
-            padding: 0;
         }
 
         .skill-list li {
@@ -515,128 +425,232 @@
         }
 
         .skill-list li::before {
-            content: '✨';
+            content: '⚡';
             position: absolute;
             left: 8px;
             top: 15px;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
+            color: var(--aws-orange);
+            font-size: 1.2rem;
         }
 
         .skill-list li:hover {
             color: var(--text-dark);
-            background: rgba(99, 102, 241, 0.08);
-            transform: translateX(8px);
+            background: rgba(255, 153, 0, 0.08);
+            transform: translateX(10px);
         }
 
-        .skill-list li:hover::before {
-            transform: scale(1.3);
+        /* Enhanced Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
         }
 
-        /* Education Section */
-        .education-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .education-card {
+        .project-card {
             background: var(--bg-white);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border-left: 6px solid var(--primary-color);
-            position: relative;
+            border-radius: var(--border-radius);
             overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
         }
 
-        .education-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            transform: translate(50%, -50%);
-            opacity: 0.1;
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-colored);
         }
 
-        .education-card h3 {
-            font-size: 1.8rem;
+        .project-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        .project-tech-stack {
+            display: flex;
+            gap: 10px;
             margin-bottom: 15px;
-            color: var(--primary-color);
-            font-weight: 700;
         }
 
-        .education-card .university {
-            font-size: 1.3rem;
-            color: var(--text-dark);
-            margin-bottom: 25px;
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
             font-weight: 600;
         }
 
-        .education-card p {
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-description {
             color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 153, 0, 0.3);
+        }
+
+        /* About Section Enhancement */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .profile-section {
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            right: -30px;
+            bottom: -30px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 3s infinite;
+        }
+
+        .avatar-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .about-text h3 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: var(--aws-orange);
+            font-weight: 800;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+            font-size: 1.2rem;
             line-height: 1.8;
-            font-size: 1.1rem;
         }
 
         /* Contact Section */
         .contact-content {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .contact-content p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 50px;
-            line-height: 1.7;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 50px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
         }
 
         .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            color: var(--text-dark);
+            background: var(--bg-white);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
             text-decoration: none;
+            color: var(--text-dark);
             transition: all 0.3s ease;
-            padding: 25px;
-            border-radius: 15px;
-            background: rgba(99, 102, 241, 0.05);
-            min-width: 120px;
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
         }
 
         .contact-item:hover {
-            color: var(--primary-color);
-            transform: translateY(-5px);
-            background: rgba(99, 102, 241, 0.1);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-colored);
+            color: var(--aws-orange);
         }
 
         .contact-item i {
-            font-size: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover i {
-            transform: scale(1.2);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--aws-orange);
         }
 
         .contact-item span {
+            display: block;
             font-weight: 600;
+            font-size: 1.1rem;
         }
 
         /* Animations */
@@ -656,19 +670,7 @@
                 transform: translateY(0px);
             }
             50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
+                transform: translateY(-20px);
             }
         }
 
@@ -683,153 +685,63 @@
             }
         }
 
-        /* Floating shapes */
-        .floating-shapes {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .shape:nth-child(1) {
-            width: 150px;
-            height: 150px;
-            top: 20%;
-            left: 10%;
-            animation-delay: -2s;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
-        }
-
-        .shape:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            top: 60%;
-            right: 10%;
-            animation-delay: -4s;
-            background: linear-gradient(45deg, rgba(245, 158, 11, 0.1), rgba(99, 102, 241, 0.1));
-        }
-
-        .shape:nth-child(3) {
-            width: 120px;
-            height: 120px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: -1s;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
-        }
-
-        .shape:nth-child(4) {
-            width: 80px;
-            height: 80px;
-            top: 10%;
-            right: 30%;
-            animation-delay: -3s;
-            background: linear-gradient(45deg, rgba(245, 158, 11, 0.1), rgba(99, 102, 241, 0.1));
-        }
-
-        .shape:nth-child(5) {
-            width: 160px;
-            height: 160px;
-            bottom: 10%;
-            right: 20%;
-            animation-delay: -5s;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
-        }
-
-        /* Scroll indicator */
+        /* Scroll Indicator */
         .scroll-indicator {
             position: fixed;
-            top: 75px;
+            top: 80px;
             left: 0;
             height: 4px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            background: var(--primary-gradient);
             z-index: 1000;
             transition: width 0.1s ease;
         }
 
-        /* Responsive Design */
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            nav ul {
-                display: none;
-            }
-
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
+            
             .about-content {
                 grid-template-columns: 1fr;
-                text-align: center;
                 gap: 60px;
+                text-align: center;
             }
-
+            
+            .skills-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .avatar-img {
                 width: 250px;
                 height: 250px;
             }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
+            
             .section h2 {
                 font-size: 2.5rem;
-                margin-bottom: 60px;
-            }
-
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .skill-card {
-                padding: 30px 25px;
-            }
-            
-            .avatar-img {
-                width: 200px;
-                height: 200px;
-            }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--aws-orange);
         }
     </style>
 </head>
@@ -839,94 +751,149 @@
     <nav id="navbar">
         <div class="container">
             <a href="#home" class="logo">
-                <img src="/avatar.jpg" alt="Nuren Sherpa" class="logo-img">
-                <span>Nuren</span>
+                <img src="avatar.jpg" alt="Nuren Sherpa" class="logo-img">
+                <span>Nuren Sherpa</span>
+                <div class="aws-certified-badge">AWS FOCUSED</div>
             </a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </nav>
 
     <section id="home" class="hero">
-    <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <div class="hero-content">
-        <h1 id="heroTitle">Nuren Sherpa</h1>
-        <div class="hero-subtitle">Cloud & AWS Enthusiast</div>
-        <p>Exploring the future of technology with AWS, building scalable cloud solutions, and driving innovation in the cloud ecosystem.</p>
-        <div class="cta-buttons">
-            <a href="#about" class="cta-button">
-                <i class="fas fa-user"></i>
-                Discover My Cloud Journey
-            </a>
-            <a href="#contact" class="cta-button secondary">
-                <i class="fas fa-envelope"></i>
-                Get In Touch
-            </a>
-        </div>
-    </div>
-    <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
-
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="avatar.jpg" alt="Nuren Sherpa" class="avatar-img">
-                </div>
-               <div class="about-text">
-                <h3>Cloud  & AWS Enthusiast</h3>
-                <p>I'm a Computer Engineering graduate from the Institute of Engineering (IOE), Tribhuvan University, with a passion for Cloud Computing, particularly in AWS, to unlock the full potential of modern cloud infrastructure.. After gaining a solid foundation in Computer Engineering, I’ve shifted my focus entirely to cloud technologies, where I’m building expertise in services like EC2, S3, IAM, and Lambda.</p>
-                <p>I believe in the power of the cloud to scale businesses and streamline operations, and I’m committed to staying on the cutting edge of this fast-evolving field. Whether it’s managing infrastructure, automating tasks with Lambda, or deploying applications on EC2, I’m eager to bring my cloud expertise to real-world solutions.</p>
-                <p>Currently, I’m learning to leverage AWS to architect scalable solutions and improve business efficiency. My goal is to combine my technical foundation with cloud computing skills to drive innovation and solve complex problems in the cloud ecosystem.</p>
+        <div class="aws-logo-bg">AWS</div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fab fa-aws"></i>
+                AWS Cloud Engineer Ready for Production
             </div>
+            <h1>Nuren Sherpa</h1>
+            <div class="hero-subtitle">AWS Cloud Solutions Architect</div>
+            <p>Transforming businesses through scalable cloud infrastructure, serverless architectures, and cutting-edge AWS solutions. Ready to architect your next cloud transformation.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-button">
+                    <i class="fas fa-rocket"></i>
+                    View AWS Projects
+                </a>
+                <a href="#contact" class="cta-button secondary">
+                    <i class="fas fa-calendar"></i>
+                    Schedule Interview
+                </a>
             </div>
         </div>
     </section>
 
-   <section id="skills" class="section">
-    <div class="container">
-        <h2>Core Competencies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">
-                    <i class="fas fa-cloud"></i>
+    <section id="certifications" class="certifications-showcase">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">AWS Certification Journey</h2>
+            <p style="text-align: center; color: rgba(255,255,255,0.8); font-size: 1.2rem; margin-bottom: 60px;">
+                Committed to continuous learning and AWS mastery
+            </p>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3 class="cert-title">AWS Cloud Practitioner</h3>
+                    <p class="cert-status">In Progress - Expected 2025</p>
                 </div>
-                <h3>AWS & Cloud Skills</h3>
-                <ul class="skill-list">
-                    <li>AWS EC2 (instance management, scaling, and security)</li>
-                    <li>AWS S3 (bucket management, permissions, and file storage)</li>
-                    <li>AWS IAM (identity management, creating roles/policies, security best practices)</li>
-                    <li>AWS Lambda (serverless functions for automation)</li>
-                    <li>AWS RDS (database management, scaling solutions)</li>
-                    <li>AWS CloudFormation (Infrastructure as Code)</li>
-                    <li>Basic AWS CLI usage for resource management</li>
-                    <li>Understanding AWS security best practices (e.g., VPC, encryption)</li>
-                </ul>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="cert-title">AWS Solutions Architect Associate</h3>
+                    <p class="cert-status">Target - Mid 2025</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="cert-title">AWS Developer Associate</h3>
+                    <p class="cert-status">Planned - Late 2025</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <div class="skill-icon">
-                    <i class="fas fa-tools"></i>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="section-subtitle">
+                Computer Engineering graduate specializing in AWS cloud solutions with hands-on experience in scalable infrastructure
+            </p>
+            <div class="about-content">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="avatar.jpg" alt="Nuren Sherpa" class="avatar-img">
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">AWS Services</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Cloud Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">AWS Focused</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Learning Mode</span>
+                        </div>
+                    </div>
                 </div>
-                <h3>DevOps & Automation Tools</h3>
-                <ul class="skill-list">
+                <div class="about-text">
+                    <h3>AWS Cloud Engineer</h3>
+                    <p>Fresh Computer Engineering graduate from IOE, Tribhuvan University, with an <strong>intense focus on AWS cloud technologies</strong>. I've made a strategic decision to specialize entirely in cloud computing, recognizing it as the future of scalable technology solutions.</p>
+                    <p>My journey involves deep-diving into <strong>AWS ecosystem</strong> - from foundational services like EC2, S3, and IAM to advanced serverless architectures with Lambda and infrastructure automation. I'm not just learning AWS; I'm building real projects that demonstrate production-ready skills.</p>
+                    <p><strong>What sets me apart:</strong> I understand that modern businesses need cloud experts who can architect, deploy, and maintain scalable solutions. My goal isn't just to use AWS services—it's to become the go-to person for cloud transformations.</p>
+                    <p>Currently building a portfolio of cloud projects that showcase real-world problem-solving abilities. Ready to bring fresh perspectives and cutting-edge cloud knowledge to your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <p class="section-subtitle">
+                Production-ready AWS skills with hands-on experience in cloud architecture and automation
+            </p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3>Core AWS Services</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>EC2: Auto-scaling, load balancing, security groups, and cost optimization</li>
+                        <li>S3: Bucket policies, lifecycle management, static website hosting, and CDN integration</li>
+                        <li>IAM: Role-based access control, policy creation, and security best practices</li>
+                        <li>Lambda: Serverless functions, event-driven architecture, and API Gateway integration</li>
+                        <li>RDS: Database management, automated backups, and multi-AZ deployments</li>
+                        <li>VPC: Network architecture, subnets, routing, and security configurations</li>
+                        <li>CloudFormation: Infrastructure as Code for repeatable deployments</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>DevOps & Automation</h3>
+                    </div>
+<ul class="skill-list">
                     <li>CI/CD Pipelines (setting up with Jenkins, GitHub Actions)</li>
                     <li>Docker (containerization, Docker Compose)</li>
                     <li>Terraform (basic Infrastructure as Code)</li>
