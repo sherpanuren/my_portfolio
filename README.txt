@@ -1,7 +1,3 @@
-Here's the modified version of your portfolio description, tailored to match your focus on Cloud Engineering and AWS:
-
----
-
 # 👋 Nuren Sherpa – Personal Portfolio Website
 
 Welcome to my personal portfolio website, built to showcase my journey as an aspiring **AWS Cloud Engineer** with a background in **Computer Engineering**.
