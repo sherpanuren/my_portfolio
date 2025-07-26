@@ -1,8 +1,12 @@
+Here's the modified version of your portfolio description, tailored to match your focus on Cloud Engineering and AWS:
+
+---
+
 # 👋 Nuren Sherpa – Personal Portfolio Website
 
-Welcome to my personal portfolio website built to showcase my journey as an aspiring **ICT Project Manager** with a background in Computer Engineering.
+Welcome to my personal portfolio website, built to showcase my journey as an aspiring **AWS Cloud Engineer** with a background in **Computer Engineering**.
 
-This site reflects my transition from hands-on technical work to managing impactful digital projects, especially in the Nepali tech ecosystem.
+This site reflects my transition from technical hands-on work to focusing on cloud technologies, particularly **AWS**, and my goal of becoming a **Solutions Architect** in the cloud field.
 
 🌐 [Visit Live Website](https://nurensherpa.com.np)
 
@@ -12,22 +16,23 @@ This site reflects my transition from hands-on technical work to managing impact
 
 **This** is a fully responsive single-page HTML/CSS/JS website with smooth animations and clean UI. It includes:
 
-- 🎯 A professional hero section
-- 👨‍💻 About Me section with career focus
-- 💼 Skills & Core Competencies
-- 🎓 Education details
-- 📬 Contact form with interactive behavior
-- 🌌 Floating particle background effect
+* 🎯 A professional hero section
+* 👨‍💻 About Me section with a career focus on Cloud Engineering and AWS
+* 💼 Skills & Core Competencies in Cloud technologies
+* 🎓 Education details
+* 📬 Contact form with interactive behavior
+* 🌌 Floating particle background effect
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5**
-- **CSS3** (no frameworks)
-- **Vanilla JavaScript**
-- 🎨 Custom responsive styling and animations
-- ✨ No external dependencies – works as a single file!
+* **HTML5**
+* **CSS3** (no frameworks)
+* **Vanilla JavaScript**
+* **AWS** (for cloud-based projects)
+* 🎨 Custom responsive styling and animations
+* ✨ No external dependencies – works as a single file!
 
 ---
 
@@ -35,8 +40,8 @@ This site reflects my transition from hands-on technical work to managing impact
 
 This project can be deployed easily using:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
+* [GitHub Pages](https://pages.github.com/)
+* [Vercel](https://vercel.com/)
 
 Simply upload `index.html` (and optionally favicon or images), and you're good to go.
 
@@ -50,3 +55,5 @@ Clone the repo or download the `index.html`:
 git clone https://github.com/yourusername/hi.git
 cd hi
 open index.html
+```
+
