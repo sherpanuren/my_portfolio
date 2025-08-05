@@ -29,27 +29,3 @@ This site reflects my transition from technical hands-on work to focusing on clo
 * **AWS** (for cloud-based projects)
 * 🎨 Custom responsive styling and animations
 * ✨ No external dependencies – works as a single file!
-
----
-
-## 🚀 Deployment
-
-This project can be deployed easily using:
-
-* [GitHub Pages](https://pages.github.com/)
-* [Vercel](https://vercel.com/)
-
-Simply upload `index.html` (and optionally favicon or images), and you're good to go.
-
----
-
-## 📌 How to Use
-
-Clone the repo or download the `index.html`:
-
-```bash
-git clone https://github.com/yourusername/hi.git
-cd hi
-open index.html
-```
-
