@@ -10,34 +10,34 @@ This site reflects my transition from a technical background in engineering to f
 
 This is a fully responsive single-page HTML/CSS/JS website with smooth animations and clean UI. It includes:
 
- A professional hero section
+ **A professional hero section
 
-👨‍💻About Me section with a career focus on Data Analytics
+**👨‍💻About Me section with a career focus on Data Analytics
 
-Projects showcasing data analysis, visualization, and dashboard creations
+**Projects showcasing data analysis, visualization, and dashboard creations
 
-Skills & Core Competencies in data analytics tools and techniques
+**Skills & Core Competencies in data analytics tools and techniques
 
-Education details
+**Education details
 
-Contact form with interactive behavior
+**Contact form with interactive behavior
 
-Floating particle background effect
+**Floating particle background effect
 
 Tech Stack
 
-HTML5
+**HTML5
 
-CSS3 (no frameworks)
+**CSS3 (no frameworks)
 
-Vanilla JavaScript
+**Vanilla JavaScript
 
-Python (for data analysis and visualization)
+**Python (for data analysis and visualization)
 
-SQL (for data manipulation and queries)
+**SQL (for data manipulation and queries)
 
-Power BI (for creating data dashboards)
+**Power BI (for creating data dashboards)
 
-Custom responsive styling and animations
+**Custom responsive styling and animations
 
-No external dependencies – works as a single file!
+**No external dependencies – works as a single file!
