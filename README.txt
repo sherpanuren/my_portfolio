@@ -24,11 +24,10 @@ This is a fully responsive, single-page HTML/CSS/JS website with smooth animatio
 
 ## Tech Stack
 
-* **HTML5**
-* **CSS3** (No frameworks)
-* **Vanilla JavaScript**
-* **Python** (For data analysis and visualization)
-* **SQL** (For data manipulation and queries)
-* **Power BI** (For creating data dashboards)
+* HTML5
+* CSS3 (No frameworks)
+* Python (For data analysis and visualization)
+* SQL (For data manipulation and queries)
+* Power BI (For creating data dashboards)
 * Custom responsive styling and animations
 * No external dependencies – works as a single file!
