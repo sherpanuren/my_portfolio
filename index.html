@@ -56,22 +56,22 @@
             transition: all 0.3s ease;
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+       .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    .logo img.avatar {
+        width: 40px;         /* Set the image size */
+        height: 40px;        /* Keep the image square */
+        border-radius: 50%;  /* Circular image */
+        object-fit: cover;   /* Ensures the image maintains aspect ratio */
+        margin-right: 20px;  /* Space between the image and the nav links */
+    }
+
 
         .nav-links {
             display: flex;
