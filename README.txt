@@ -1,6 +1,6 @@
 # Nuren Sherpa – Personal Portfolio Website
 
-Welcome to my personal portfolio website, built to showcase my journey as an aspiring **Data Analyst** with a background in **Computer Engineering**.
+Welcome to my personal portfolio website, built to showcase my journey as an **Buisness | Data Analyst** with a background in **Computer Engineering**.
 
 This site reflects my transition from a technical engineering background to focusing on data analysis, particularly utilizing **Python**, **SQL**, and **Power BI**. My goal is to leverage data to uncover actionable insights that can drive informed business decisions.
 
