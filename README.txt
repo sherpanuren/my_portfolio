@@ -1,33 +1,79 @@
-# Nuren Sherpa – Personal Portfolio Website
+# Nuren Sherpa – Business & Data Analyst Portfolio
 
-Welcome to my personal portfolio website, built to showcase my journey as an Buisness|Data Analyst with a background in Computer Engineering.
+Welcome to my portfolio repository. I am a **Business & Data Analyst** with a Computer Engineering background, specializing in translating data into actionable business insights and user-centered solutions.
 
-This site reflects my transition from a technical engineering background to focusing on data analysis, particularly utilizing Python, SQL, and Power BI. My goal is to leverage data to uncover actionable insights that can drive informed business decisions.
-
-[Visit Live Website](https://nurensherpa.com.np)
+🔗 **Live Portfolio:** [https://nurensherpa.com.np](https://nurensherpa.com.np)
 
 ---
 
-## About This Project
+## 👨‍💻 About Me
 
-This is a fully responsive, single-page HTML/CSS/JS website with smooth animations and a clean user interface. It includes:
+I combine technical expertise in **data analysis** with strategic **business analysis** methodologies to help organizations make data-driven decisions. My focus is on bridging the gap between raw data, user needs, and business goals—whether through dashboards, customer journey maps, or clear requirement documentation.
 
-* A professional hero section
-* An About Me section with a career focus on Data Analytics
-* Projects showcasing data analysis, visualization, and dashboard creations
-* Skills & core competencies in data analytics tools and techniques
-* Education details
-* A contact form with interactive behavior
-* A floating particle background effect
+**Core Competencies:**
+- **Data Analysis & Visualization:** Python, SQL, Power BI, EDA, Dashboarding
+- **Business Analysis:** Customer Journey Mapping, Requirement Elicitation, User Stories, Process Mapping
+- **Tools & Technologies:** Git, Jira, Excel, Figma, Google Analytics, Mixpanel
 
 ---
 
-## Tech Stack
+## 📁 Projects
 
-* HTML5
-* CSS3 (No frameworks)
-* Python (For data analysis and visualization)
-* SQL (For data manipulation and queries)
-* Power BI (For creating data dashboards)
-* Custom responsive styling and animations
-* No external dependencies – works as a single file!
+| Project | Description | Tools Used |
+|---------|-------------|------------|
+| **Customer Journey Mapping (Remittance)** | Mapped end-to-end customer experience for a fintech remittance product to identify pain points and opportunities. | Miro, Personas, CJM Framework |
+| **Sales Performance Dashboard** | Interactive Power BI dashboard tracking KPIs, trends, and regional performance for a retail business. | Power BI, SQL, DAX |
+| **Requirement Elicitation Workshop** | Facilitated stakeholder workshops to define features and prioritize using MoSCoW for a new onboarding flow. | Jira, User Stories, MoSCoW |
+| **Python EDA – Customer Segmentation** | Analyzed customer data to identify segments and recommend targeted marketing strategies. | Python (Pandas, Matplotlib, Seaborn) |
+
+---
+
+## Skills Breakdown
+
+### **Business Analysis**
+- Customer Journey Mapping
+- Requirements Gathering & Documentation
+- User Story & Use Case Development
+- Process Mapping & Optimization
+- Stakeholder Communication & Workshops
+
+### **Technical & Analytical**
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- SQL (Joins, CTEs, Window Functions)
+- Power BI (DAX, Modeling, Dashboards)
+- Data Cleaning, Transformation & Modeling
+- A/B Testing & Statistical Analysis
+
+### **Soft Skills**
+- Analytical Thinking
+- Problem-Solving
+- Clear & Concise Communication
+- Presentation & Visualization
+- Collaboration & Facilitation
+
+---
+
+## Education
+
+**Bachelor of Computer Engineering**  
+*[Kathford Internation College of Engineering and Management]*
+
+---
+
+## Contact & Connect
+
+I'm always open to discussing data, business analysis, or collaboration opportunities.
+
+- **Email:** sherpanuren1@gmail.com  
+- **LinkedIn:** [https://www.linkedin.com/in/nurensherpa/]
+- **Portfolio:** [nurensherpa.com.np](https://nurensherpa.com.np)  
+- **GitHub:** [https://github.com/sherpanuren]
+---
+
+## 📄 License
+
+This portfolio website is open-source under the [MIT License](LICENSE).
+
+---
+
+*“Turning data into decisions, and insights into impact.”*
