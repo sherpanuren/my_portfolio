@@ -2,7 +2,7 @@ Nuren Sherpa – Business & Data Analyst Portfolio
 
 Welcome to my portfolio repository. I am a Business & Data Analyst with a Computer Engineering background, specializing in translating data into actionable business insights and user-centered solutions.
 
-Live Portfolio: [https://nurensherpa.com.np](https://nurensherpa.com.np)
+Live Portfolio: [https://nurensherpa.com.np]
 
 About Me :
 I combine technical expertise in data analysis with strategic business analysis methodologies to help organizations make data-driven decisions. My focus is on bridging the gap between raw data, user needs, and business goals—whether through dashboards, customer journey maps, or clear requirement documentation.
